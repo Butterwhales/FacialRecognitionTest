@@ -10,6 +10,7 @@ public class Main {
 
     public static void main(String[] args) {
         WebcamStream stream = new WebcamStream();
+
     }
 }
 
@@ -23,6 +24,12 @@ class WebcamStream extends JFrame implements Runnable {
     JLabel imageLabel = new JLabel(icon);
 
     public WebcamStream() {
+
+        Runtime.getRuntime().addShutdownHook(new Thread(() -> {
+        System.out.println("Shutting down...");
+        webcam.close();
+        }));
+
         setLayout(new BorderLayout());
         webcamPanel = new JPanel();
         add(webcamPanel, BorderLayout.CENTER);
@@ -38,6 +45,8 @@ class WebcamStream extends JFrame implements Runnable {
     }
 
     public void run() {
+
+
         icon.setImage(webcam.getImage());
         repaint();
         try {
