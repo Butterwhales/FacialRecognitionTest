@@ -28,6 +28,29 @@
             <version>0.3.10</version>
         </dependency>
 
+        <dependency>
+            <artifactId>image-processing</artifactId>
+            <groupId>org.openimaj</groupId>
+            <version>1.3.6</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>groupId</groupId>
+            <artifactId>FacialRecognitionTest</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <artifactId>faces</artifactId>
+            <groupId>org.openimaj</groupId>
+            <version>1.3.6</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <artifactId>video-processing</artifactId>
+            <groupId>org.openimaj</groupId>
+            <version>1.3.6</version>
+            <scope>compile</scope>
+        </dependency>
     </dependencies>
 
 

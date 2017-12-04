@@ -26,14 +26,13 @@ class WebcamStream extends JFrame implements Runnable {
     public WebcamStream() {
 
         Runtime.getRuntime().addShutdownHook(new Thread(() -> {
-        System.out.println("Shutting down...");
-        webcam.close();
+            System.out.println("Shutting down...");
+            webcam.close();
         }));
 
         setLayout(new BorderLayout());
         webcamPanel = new JPanel();
         add(webcamPanel, BorderLayout.CENTER);
-
 
 
         webcam = Webcam.getDefault();
